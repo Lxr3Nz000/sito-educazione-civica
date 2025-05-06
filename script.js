@@ -17,3 +17,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const close = document.getElementsByClassName("close")[0];
+
+// Clic sull'immagine
+document.querySelectorAll('.clickable-image').forEach(img => {
+  img.onclick = () => {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  }
+});
+
+// Clic sulla X
+close.onclick = () => {
+  modal.style.display = "none";
+}
+
+// Clic fuori dall'immagine
+window.onclick = (event) => {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+// Premi ESC per chiudere
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    modal.style.display = "none";
+  }
+});
+
