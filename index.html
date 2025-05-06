@@ -1,151 +1,210 @@
 <!DOCTYPE html>
-
+<html lang="it">
 
 <head>
+    <link rel="icon" type="image/png" href="talking.ico">
 
-    <title>Home</title>
-    <link rel="icon" type="image/x-icon" href="icona.png">
-
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Font Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-
-    <!-- Collegamento al CSS esterno -->
+    <title>ComuniKa - Comunichiamo correttamente</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Sfondo e stile specifico per la home -->
-     <style>
-        body {
-    margin: 0;
-    padding: 0;
-    background-image: url("slot.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    color: white;
-}
+    <head>
+        ...
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
 
-.overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    /* oscuramento per leggibilità */
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.titleHome {
-    font-size: 3em;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: white;
-}
-
-     </style>
-    
 </head>
 
 <body>
-    <div class="overlay">
-        <h1 class="titleHome">
-            LUDOPATIA<br>
-            SCOMMESSE SPORTIVE<br>
-            CASINÒ<br>
-            GRATTA E VINCI
-        </h1>
-
-        <nav class="navbarstyle">
-            <a class="navbarstyle" href="ludopatia.html" target="_blank">Ludopatia</a>
-            <a class="navbarstyle" href="scommesse.html" target="_blank">Scommesse Sportive</a>
-            <a class="navbarstyle" href="casino.html" target="_blank">Casinò</a>
-            <a class="navbarstyle" href="gratta.html" target="_blank">Gratta e Vinci</a>
+    <header>
+        <div class="logo">
+            <img src="ChatGPT Image 6 mag 2025, 09_51_24.png" alt="Q Productions Logo" style="border-radius: 30px;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servizi">Servizi</a></li>
+                <li><a href="#chi-siamo">Chi Siamo</a></li>
+            </ul>
         </nav>
-    </div>
+    </header>
 
-    <section class="sotto-immagine">
-        <h1 class="title">ARGOMENTI TRATTATI</h1>
-        <div class="box-foto-testo">
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-image"></div>
+            <div class="hero-content">
+                <h1>EDUCAZIONE CIVICA</h1>
+                <h1>4DI</h1>
+                <h1>LORENZO MANGIA, MARCO MARASCO, LORENZO LEGA</h1>
+            </div>
+        </section>
 
-            <a href="ludopatia.html" target="_blank">
-                <img src="ludopatia.jpg" alt="Descrizione immagine" class="immagine-laterale-sinistro">
-            </a>
-            <p class="testo-laterale-destro"> La ludopatia è quando una persona non riesce a smettere di giocare
-                d'azzardo,
-                tipo alle slot, scommesse o gratta e vinci, anche se sa che sta rovinando la propria vita. È una specie
-                di dipendenza, come quella dalle droghe o dall'alcol, solo che invece di una sostanza, è il gioco che ti
-                "frega". Chi ne soffre continua a giocare anche se perde soldi, dice bugie ai familiari, si isola dagli
-                amici e magari si indebita. Uscirne non è facile, ma ci sono psicologi e gruppi che possono aiutare.</p>
-        </div>
+        <section id="servizi" class="services">
+            <div class="container">
+                <h2>I Nostri Servizi</h2>
+                <div class="services-grid">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                        <h3>Riflessioni sui punti pel manifesto sulla comunicazione non ostile</h3>
+                        <p>Riflessioni specifiche per tutti i punti del manifesto riguardante la comunicazione non
+                            ostile</p>
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Documenti sull'AI</h3>
+                        <p>Riflessioni riguardanti l'intelligenza artificiale, pro e contro al giorno d'oggi.</p>
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                        <h3>Siti web</h3>
+                        <p>Siti web inerenti al web e ai vari pericoli nei quali possiamo ritrovarci </p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-text-container">
+                <img src="pptInglese.png" alt="Immagine Sinistra" class="clickable-image">
+                <div id="imageModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modalImg">
+                </div>
+                <p class="center-text">
+                    L’intelligenza artificiale (AI) è una tecnologia che consente alle macchine di apprendere, ragionare
+                    e prendere decisioni simili agli esseri umani. Viene utilizzata in molti settori, come medicina,
+                    sicurezza, educazione e industria. Può migliorare la qualità della vita, automatizzare compiti
+                    e fornire soluzioni rapide a problemi complessi. Tuttavia, è importante usarla con responsabilità,
+                    perché può comportare rischi come la perdita di posti di lavoro o la diffusione di
+                    disinformazione.
+                </p>
 
-        <hr>
+            </div>
+            <hr>
 
-        <div class="box-foto-testo">
-            <p class="testo-laterale-sinistro"> Le scommesse sportive sembrano un gioco, tipo "indovina chi vince" e
-                vinci soldi, ma in realtà possono diventare un problema serio. All’inizio magari ci provi per divertirti
-                o per noia, ma poi inizi a puntare sempre di più, pensando di rifarti se perdi. È facile cascarci,
-                soprattutto online dove basta un click. Il problema è che si può diventare dipendenti, come succede con
-                la ludopatia, e non te ne accorgi finché non hai perso tempo, soldi e magari anche la fiducia delle
-                persone vicine. Bisogna stare attenti e non prenderla troppo alla leggera.</p>
-
-            <a href="scommesse.html" target="_blank">
-                <img src="scommesse_sportive_.jpg" alt="Descrizione immagine" class="immagine-laterale-destro"
-                    >
-            </a>
-
-        </div>
-
-
-        <hr>
-        <div class="box-foto-testo">
-
-            <a href="casino.html" target="_blank">
-                <img src="casOnline.jpg" alt="Descrizione immagine" class="immagine-laterale-sinistro">
-            </a>
-            <p class="testo-laterale-destro" > I casinò sembrano posti fighi, pieni di luci, giochi e la promessa di
-                vincere un sacco di soldi. Ma la verità è che quasi sempre ci perdi, e tanto. Ti illudi di poter
-                "battere il sistema", ma in realtà è il sistema che vince sempre. Più giochi, più rischi di finire
-                dentro una spirale dove non riesci più a smettere. Anche chi gioca online può finire nei guai, perché è
-                tutto più facile e veloce. Alla fine rischi di rovinarti per inseguire una vincita che magari non
-                arriverà mai.</p>
-        </div>
-
-        <hr>
-
-        <div class="box-foto-testo">
-            <p class="testo-laterale-sinistro"> I gratta e vinci online sembrano una roba innocente: spendi pochi euro,
-                gratti con un click, e magari vinci. Ma il problema è proprio lì: sono veloci, facili e ti illudono che
-                la vincita sia sempre dietro l’angolo. Così inizi a farne uno, poi un altro, e un altro ancora. Anche se
-                perdi, pensi “dai, il prossimo lo vinco”, e intanto i soldi se ne vanno. È un gioco che sembra
-                tranquillo, ma può diventare una vera dipendenza, soprattutto perché nessuno ti vede e puoi giocarci a
-                qualsiasi ora dal telefono.</p>
-
-            <a href="gratta.html" target="_blank">
-                <img src="gratta-online.jpg" alt="Descrizione immagine" class="immagine-laterale-destro">
-            </a>
-
-        </div>
-
-    </section>
+            <div class="image-text-container">
+                <p class="center-text">
+                    La comunicazione non ostile è un modello di comunicazione fondato sul rispetto, sull’ascolto e
+                    sull’empatia, che invita a riflettere sull’importanza delle parole. È nata in risposta ai linguaggi
+                    aggressivi che troppo spesso si diffondono, in particolare sui social media e nelle piattaforme
+                    digitali, ma è applicabile in ogni contesto, sia online che offline. Questo tipo di comunicazione si
+                    basa su dieci principi, raccolti nel Manifesto della comunicazione non ostile, che promuovono un uso
+                    responsabile e consapevole delle parole.
+                    Tra i principi fondamentali ci sono l’importanza di pensare prima di parlare, di scegliere parole
+                    precise per esprimere il proprio pensiero e di non attribuire un significato offensivo o distruttivo
+                    alla comunicazione.
+                    In una società sempre più interconnessa, dove una parola può raggiungere migliaia di persone in
+                    pochi secondi, è fondamentale essere consapevoli del potere che essa ha. Le parole possono unire o
+                    dividere, costruire o distruggere, includere o escludere. Scegliere di comunicare in modo non ostile
+                    significa assumersi la responsabilità del proprio linguaggio e contribuire a un clima sociale più
+                    sano e rispettoso.
+                    Adottare la comunicazione non ostile è un gesto di civiltà e maturità che può fare la differenza,
+                    specialmente tra i giovani e nelle comunità scolastiche e digitali.
+                </p>
+                <img src="manifesto.png" alt="Immagine Sinistra" class="clickable-image">
+                <div id="imageModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modalImg">
+                </div>
 
 
+            </div>
+            
+        </section>
+
+        <section id="chi-siamo" class="about-us">
+            <div class="container">
+                <h2>Chi Siamo</h2>
+                <p style="text-align: center;">Siamo dei ragazzi di quarto delle scuole superiori, più precisamente
+                    dell'istituto tecnico e tecnologico
+                    G.Giorgi, facciamo il settore informatico, ci troviamo nella provincia di Brindisi in Puglia;
+                    abbiamo deciso di sviluppare questo
+                    sito come compito di educazione civica anche per testare le nostre competenze informatiche</p>
+
+                <div class="instagram-profiles" style="text-align: center;">
+                    <div class="profile">
+                        <a href="https://www.instagram.com/lore._mangia._/" target="_blank">
+                            <i class="fab fa-instagram"></i> Lorenzo Mangia
+                        </a>
+                    </div>
+                    <div class="profile">
+                        <a href="https://www.instagram.com/_marco.marasco_/" target="_blank">
+                            <i class="fab fa-instagram"></i> Marco Marasco
+                        </a>
+                    </div>
+                    <div class="profile">
+                        <a href="https://www.instagram.com/lorenzo.lega_/" target="_blank">
+                            <i class="fab fa-instagram"></i> Lorenzo Lega
+                        </a>
+                    </div>
+                </div>
+                           
+            </div>
+                   
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2>Tutti i nostri lavori</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="work-icon document-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <img src="portfolio-1.jpg" alt="Anteprima Lavoro Inglese" style="display: none;">
+
+                        <a href="Inglese.pdf" target="_blank" class="work-button bordered-button"
+                            style="text-decoration: none;">Riflessioni AI</a>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="work-icon website-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <img src="portfolio-2.jpg" alt="Anteprima Sito Web" style="display: none;">
 
 
+                        <a href="https://lxr3nz000.github.io/sito-informatica/" target="_blank"
+                            class="work-button bordered-button">Sito Web Lorenzo Mangia</a>
 
 
-    <footer class="footer-style">
-        <p>&copy;</p>
-        <p>Nome e Cognome: Lorenzo Mangia</p>
-        <p>Classe: 4D</p>
-        <p>Sezione: Informatica</p>
-        <p>Email: lorenzomangia16@gmail.com</p>
-    </footer>
+                        <a href="https://ciccioriccio90.github.io/Sito-ed-civica/" target="_blank"
+                            class="work-button bordered-button">Sito Web Marco Marasco</a>
+
+                        <a href="http://lxree0.github.io/SitoInformatica/index.html" target="_blank"
+                            class="work-button bordered-button">Sito Web Lorenzo Lega</a>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="work-icon document-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <img src="portfolio-3.jpg" alt="Anteprima Altro Lavoro" style="display: none;">
+
+                        <a href="altro-lavoro.pdf" target="_blank" class="work-button bordered-button"
+                            style="text-decoration: none;">Riflessioni Manifesto</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+        <footer >
+                <div class="container">
+                        <p>&copy; 2025 Production, Lorenzo Mangia, Lorenzo Lega, Marco Marasco</p>
+                        <div class="social-links">
+                            </div>
+                    </div>
+            </footer>
+
+       
+    <script src="script.js"></script>
 </body>
 
 </html>
