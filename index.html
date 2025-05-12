@@ -18,6 +18,71 @@
             html {
                 scroll-behavior: smooth;
             }
+
+            /* CSS per centrare e rendere più carina la tabella */
+            table {
+                width: 80%;
+                margin: 20px auto;
+                border-collapse: collapse;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                background-color: #f9f9f9;
+            }
+
+            th,
+            td {
+                padding: 12px 20px;
+                text-align: center;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+
+            th {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            td {
+                background-color: #ffffff;
+            }
+
+            tr:nth-child(even) td {
+                background-color: #f2f2f2;
+            }
+
+            tr:hover {
+                background-color: #ddd;
+            }
+
+            /* Aggiungere stile al bottone di calcolo */
+            button {
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+            /* Stile per il contenitore della sezione */
+            .alcohol-calculator {
+                text-align: center;
+                padding: 40px 0;
+            }
+
+            .form-container {
+                margin-bottom: 30px;
+            }
+
+            .result {
+                margin-top: 20px;
+                font-size: 18px;
+                font-weight: bold;
+            }
         </style>
     </head>
 
@@ -111,11 +176,43 @@
                     <span class="close">&times;</span>
                     <img class="modal-content" id="modalImg">
                 </div>
+                <hr>
+                <div class="image-text-container">
+                    <img src="Articolo-blog-Haters.jpg" alt="Immagine Sinistra" class="clickable-image">
+                    <div id="imageModal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="modalImg">
+                    </div>
+                    <p class="center-text">
+                        Gli haters sono quelle persone che, invece di supportarti o essere positive, si divertono a
+                        criticare, insultare o buttarti giù. Spesso lo fanno sui social, dove si nascondono dietro uno
+                        schermo. Questi tipi di persone sembrano voler rovinare la giornata a chiunque, per sentirsi
+                        superiori o per sfogare frustrazioni. Non sempre hanno un motivo valido per criticare, è solo
+                        una questione di negatività.
+                        Alla fine, gli haters sono persone che cercano di trascinarti giù perché probabilmente non sono
+                        soddisfatti di se stessi. Ignorarli è la scelta migliore.
+                    </p>
+                    <p class="center-text">
+
+
+                        Testimonianza 1:
+                        "Quando ho postato una foto con un vestito che mi piaceva, subito sono arrivati commenti tipo
+                        'Sei ridicolo' o 'Ma cosa stai facendo?' Non mi conoscevano nemmeno, ma si sono sentiti in
+                        dovere di scrivere per sminuirmi." — Luca, 17 anni <br>
+
+                        Testimonianza 2:
+                        "Ho iniziato a fare dei video su YouTube e alcuni 'haters' hanno cominciato a insultarmi dicendo
+                        che non ero bravo o che avrei dovuto smettere. All'inizio ci rimanevo male, ma poi ho capito che
+                        erano solo persone che non avevano niente di meglio da fare." — Martina, 17 anni
+                    </p>
+
+                </div>
 
 
             </div>
-            
+
         </section>
+        <hr>
 
         <section id="chi-siamo" class="about-us">
             <div class="container">
@@ -147,6 +244,7 @@
             </div>
                    
         </section>
+        <hr>
 
         <section id="portfolio" class="portfolio">
             <div class="container">
@@ -188,23 +286,88 @@
                         <a href="altro-lavoro.pdf" target="_blank" class="work-button bordered-button"
                             style="text-decoration: none;">Riflessioni Manifesto</a>
                     </div>
+                    <div class="portfolio-grid">
+                        <div class="portfolio-item">
+                            <div class="work-icon document-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <img src="portfolio-1.jpg" alt="Excel tasso alcolemico" style="display: none;">
 
-                </div>
-            </div>
+                            <a href="excel.xlsx" target="_blank" class="work-button bordered-button"
+                                style="text-decoration: none;">Excel tasso alcolemico Lorenzo Mangia</a>
+                            <a href="FORMULA DI WINDMARK.xlsx" target="_blank" class="work-button bordered-button"
+                                style="text-decoration: none;">Excel tasso alcolemico Lorenzo Lega</a>
+                            <a href="TassoAlcolemicoFormula.xlsx" target="_blank" class="work-button bordered-button"
+                                style="text-decoration: none;">Excel tasso alcolemico Marco Marasco</a>
+
+                        </div>
+                    </div>
         </section>
 
-    </main>
+        <header>
+            <div class="logo">
+                <img src="ChatGPT Image 6 mag 2025, 09_51_24.png" alt="Q Productions Logo" style="border-radius: 30px;">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#servizi">Servizi</a></li>
+                    <li><a href="#chi-siamo">Chi Siamo</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <footer >
-                <div class="container">
-                        <p>&copy; 2025 Production, Lorenzo Mangia, Lorenzo Lega, Marco Marasco</p>
-                        <div class="social-links">
-                            </div>
-                    </div>
-            </footer>
 
-       
-    <script src="script.js"></script>
+
+        <main>
+            <!-- Sezione Home, Servizi, Chi siamo ecc. -->
+
+            <!-- Sezione Calcolatore Alcolemico -->
+            <section id="alcohol-calculator" class="alcohol-calculator">
+                <h2>Calcola il Tasso Alcolemico</h2>
+                <div class="form-container">
+                    <form id="alcoholForm">
+                        <label for="sex">Sesso:</label>
+                        <select id="sex" required>
+                            <option value="male">Maschio</option>
+                            <option value="female">Femmina</option>
+                        </select><br><br>
+
+                        <label for="weight">Peso (kg):</label>
+                        <input type="number" id="weight" min="30" max="200" required><br><br>
+
+                        <label for="alcohol">Quantità di alcol (grammi):</label>
+                        <input type="number" id="alcohol" min="1" required><br><br>
+
+                        <label for="hours">Ore dall'assunzione:</label>
+                        <input type="number" id="hours" min="0" required><br><br>
+
+                        <button type="submit">Calcola Tasso Alcolemico</button>
+                    </form>
+                </div>
+
+                <div class="result" id="result">
+                    <!-- Risultato del calcolo -->
+                </div>
+            </section>
+
+            <!-- Altre sezioni del sito come "Servizi", "Chi siamo", etc... -->
+
+
+
+
+        </main>
+
+            <footer>
+                    <div class="container">
+                            <p>&copy; 2025 Production, Lorenzo Mangia, Lorenzo Lega, Marco Marasco</p>
+                            <div class="social-links">
+                                </div>
+                        </div>
+                </footer>
+
+           
+        <script src="script.js"></script>
 </body>
 
 </html>
